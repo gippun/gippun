@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>기쁜하루 - 백일상 가격정보 큐레이션</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Pretendard Font CDN -->
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+    <style>
+        /* 기본 폰트를 Pretendard로 설정합니다. */
+        body {
+            font-family: 'Pretendard', sans-serif;
+            background-color: #FBF9F7; /* 부드러운 배경색 */
+        }
+        /* 아이콘들이 떠다니는 애니메이션 효과를 정의합니다. */
+        @keyframes gentle-float {
+            0% {
+                transform: translateY(0px) rotate(0deg);
+            }
+            50% {
+                transform: translateY(-8px) rotate(5deg); /* Y축 이동 거리 감소 */
+            }
+            100% {
+                transform: translateY(0px) rotate(0deg);
+            }
+        }
+        /* 애니메이션을 적용할 클래스 */
+        .animate-gentle-float {
+            animation: gentle-float 8s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+    <!-- 전체 페이지를 감싸는 컨테이너 -->
+    <div class="flex flex-col min-h-screen">
+        
+        <!-- 메인 콘텐츠 영역 (중앙 정렬 속성 제거) -->
+        <main class="flex-grow p-8 md:p-12"> <!-- 패딩 값 살짝 조정 -->
+            <!-- 콘텐츠 최대 넓이 설정 및 아이콘 위치의 기준점 (사이즈 조정) -->
+            <div class="relative w-full max-w-md"> <!-- 최대 넓이를 lg에서 md로 줄임 -->
+            
+                <!-- 1. 텍스트 콘텐츠 영역 (아이콘보다 위에 보이도록 z-10 설정) -->
+                <div class="relative z-10 text-left">
+                    <h1 class="text-2xl font-medium text-gray-700 mb-6"> <!-- 폰트 크기, 마진 축소 -->
+                        기쁜하루
+                    </h1>
+                    <h2 class="text-xl md:text-2xl font-bold leading-tight text-gray-800"> <!-- 폰트 크기 축소 -->
+                        내 아이를 위한<br>
+                        <span class="text-[#8B7D72]">가장 완벽한 백일상을 찾는 여정</span>
+                    </h2>
+                    <p class="mt-4 text-xs md:text-sm text-gray-600 leading-relaxed"> <!-- 폰트 크기, 마진 축소 -->
+                        흩어져 있는 모든 백일상 정보를 한곳에 모아,<br>
+                        가장 합리적인 선택을 제안합니다.
+                    </p>
+                    <div class="mt-7" text-center> <!-- 마진 축소 -->
+                        <a href="#" id="guide-button" class="inline-block bg-[#A59487] text-white text-sm font-bold py-2.5 px-10 rounded-full shadow-lg hover:bg-[#8B7D72] transition-colors duration-300 transform hover:scale-105"> <!-- 폰트 크기, 패딩 축소 -->
+                            왜 기쁜하루에서 찾을까요?
+                        </a>
+                    </div>
+                </div>
+                <!-- 2. 아이콘 배경 영역 (텍스트 뒤에 깔리도록 설정) -->
+                <div class="absolute inset-0 opacity-60">
+                    <!-- 아이콘 1: 떡 케이크 (사이즈 및 위치 조정) -->
+                    <div class="animate-gentle-float absolute top-[-1rem] left-[-2rem]">
+                        <svg width="80" height="80" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="10" y="50" width="80" height="30" rx="5" fill="#FDEEDC"/>
+                            <rect x="20" y="25" width="60" height="25" rx="5" fill="#FDEEDC"/>
+                            <circle cx="50" cy="15" r="8" fill="#F5C6AA"/>
+                        </svg>
+                    </div>
+                    <!-- 아이콘 2: 꽃 장식 (사이즈 및 위치 조정) -->
+                    <div class="animate-gentle-float absolute top-[4rem] left-[15rem] sm:left-[18rem]" style="animation-delay: -5s;">
+                        <svg width="60" height="60" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="50" cy="50" r="15" fill="#F5C6AA"/>
+                            <circle cx="35" cy="35" r="12" fill="#FDEEDC"/>
+                            <circle cx="65" cy="35" r="12" fill="#FDEEDC"/>
+                            <circle cx="35" cy="65" r="12" fill="#FDEEDC"/>
+                            <circle cx="65" cy="65" r="12" fill="#FDEEDC"/>
+                        </svg>
+                    </div>
+                    <!-- 아이콘 3: 노리개 장식 (사이즈 및 위치 조정) -->
+                    <div class="animate-gentle-float absolute bottom-[4rem] left-[-1rem]">
+                         <svg width="70" height="70" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="50" cy="30" r="20" fill="#F5C6AA"/>
+                            <rect x="47" y="50" width="6" height="30" fill="#FDEEDC"/>
+                            <rect x="37" y="50" width="6" height="20" fill="#FDEEDC"/>
+                            <rect x="57" y="50" width="6" height="20" fill="#FDEEDC"/>
+                        </svg>
+                    </div>
+                    <!-- 아이콘 4: 나뭇잎 (사이즈 및 위치 조정) -->
+                    <div class="animate-gentle-float absolute bottom-[2rem] left-[14rem] sm:left-[16rem]" style="animation-delay: -3s;">
+                        <svg width="50" height="50" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M50 10 C 20 40, 20 70, 50 90 C 80 70, 80 40, 50 10 Z" fill="#D6E5D8"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <!-- 아래에서 올라오는 페이지 뷰어 -->
+    <div id="page-viewer" class="fixed inset-0 bg-white z-50 transform translate-y-full transition-transform duration-500 ease-in-out">
+        <button id="close-button" class="absolute top-4 right-4 text-gray-500 hover:text-gray-800 z-10 p-2 rounded-full bg-gray-100 hover:bg-gray-200">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </button>
+        <iframe id="content-frame" class="w-full h-full border-0" src="about:blank"></iframe>
+    </div>
+    <script>
+        // 필요한 요소들을 가져옵니다.
+        const openButton = document.getElementById('guide-button');
+        const closeButton = document.getElementById('close-button');
+        const pageViewer = document.getElementById('page-viewer');
+        const contentFrame = document.getElementById('content-frame');
+        const pageUrl = 'https://gippunharu.github.io/main/greeting_1.html';
+        // '가이드' 버튼 클릭 이벤트
+        openButton.addEventListener('click', (e) => {
+            e.preventDefault(); // a 태그의 기본 동작(페이지 이동)을 막습니다.
+            contentFrame.src = pageUrl; // iframe에 페이지를 로드합니다.
+            pageViewer.classList.remove('translate-y-full'); // 페이지 뷰어를 화면 안으로 올립니다.
+        });
+        // '닫기' 버튼 클릭 이벤트
+        closeButton.addEventListener('click', () => {
+            pageViewer.classList.add('translate-y-full'); // 페이지 뷰어를 화면 아래로 내립니다.
+            // 애니메이션이 끝난 후 iframe 내용을 비워서 리소스를 정리합니다.
+            setTimeout(() => {
+                contentFrame.src = 'about:blank';
+            }, 500); // CSS transition 시간과 일치시킵니다.
+        });
+    </script>
+</body>
+</html>
